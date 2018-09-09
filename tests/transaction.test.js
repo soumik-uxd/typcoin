@@ -1,7 +1,7 @@
 const Transaction = require('../wallet/transaction');
 const Wallet = require('../wallet');
 
-describe('Transactions within the balance', () => {
+describe('Transactions', () => {
     let transaction, wallet, recipient, amount;
     beforeEach(() => {
         wallet = new Wallet();
@@ -9,7 +9,7 @@ describe('Transactions within the balance', () => {
         recipient = 'r3c1p13nt';
         transaction = Transaction.newTransaction(wallet, recipient, amount);
     });
-
+    //Test transactions within the balance
     it('Outputs the `amount` deducted from the wallet balance', () => {
         expect(transaction.outputs.find(output => output.address === wallet.publicKey).amount)
             .toEqual(wallet.balance - amount);

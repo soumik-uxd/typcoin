@@ -66,6 +66,7 @@ As you can see with every new peer instance the PEERS comma delimited string nee
 Now various api endpoints on the app instances can be invoked with GET/POST requests.
 
 These are described below:
+
 |Path               | Type          |Description|
 |-------------------|---------------|-----------|
 |/public-key        |GET            |Public key of the peer|

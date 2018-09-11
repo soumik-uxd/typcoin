@@ -69,9 +69,9 @@ These are described below:
 |Path               | Type          |Description|
 |-------------------|---------------|-----------|
 |/public-key        |GET            |Public key of the peer|
-|/transact          |POST           |Create a transaction.|
-|/transactions      |GET            |List current unconfirmed transactions.|
-|/mine-transaction  |GET            |Mine current unconfirmed transactions from the pool.|
+|/transact          |POST           |Create a transaction|
+|/transactions      |GET            |List current unconfirmed transactions|
+|/mine-transaction  |GET            |Mine current unconfirmed transactions from the pool|
 
 ##Demo
 Once atleast three app instances are running,transaction(s) can be first established between peers, and then the third peer can be used as a miner to verify the transaction(s), and add to the blockchain.

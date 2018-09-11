@@ -74,7 +74,7 @@ These are described below:
 |/transactions      |GET            |List current unconfirmed transactions|
 |/mine-transaction  |GET            |Mine current unconfirmed transactions from the pool|
 
-##Demo
+## Demo
 Once atleast three app instances are running,transaction(s) can be first established between peers, and then the third peer can be used as a miner to verify the transaction(s), and add to the blockchain.
 
 So we do a GET request on the 2nd peer instance with endpoint `http://localhost:3002/public-key`.

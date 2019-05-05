@@ -27,7 +27,9 @@ This project currently has below topics:
 
 ## Architecture
 
+![Typcoin P2P Architecture](arch.png "Typcoin P2P Architecture")
 
+The above diagram explains the basic anatomy of every peer node, connected in the P2P network which allows the peers to transact among each other. The connection between every peer is made via websockets. The web node is used only to perform GET/POST requests for every peer. When a transaction is made it sits in the transaction pool of every peer. Then any of the miners needs to be requested to mine/verify the transactions. Once a transaction is mined it is taken out of the transaction pool and added into the blockchain.
 
 ## How To
 
@@ -77,6 +79,7 @@ These are described below:
 |/transact          |POST           |Create a transaction|
 |/transactions      |GET            |List current unconfirmed transactions|
 |/mine-transaction  |GET            |Mine current unconfirmed transactions from the pool|
+|/blocks            |GET            |View the confirmed transactions in the blockchain|
 
 ## Demo
 Here we will set up three peers. Every peer starts with an amount of 500 coins in their wallet. Then one peer will transfer some money to the 2nd peer. The third peer then mines the transaction thereby validating it.

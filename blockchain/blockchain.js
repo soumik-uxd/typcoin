@@ -29,7 +29,7 @@ class Blockchain {
      * @returns {boolean} - validity of the chain (true if the chain is valid) 
      */
     isChainValid(chain) {
-        if (JSON.stringify(chain[0]) !== JSON.stringify(Block.genesis())) return false;
+        if (JSON.stringify(chain[0].hash) !== JSON.stringify(Block.genesis().hash)) return false;
 
         for(let i=1; i < chain.length; i++) {
             const block = chain[i];

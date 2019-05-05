@@ -9,7 +9,7 @@ describe('Blockchain', () => {
     });
 
     it('Starts with the genesis block', () => {
-        expect(bc.chain[0]).toEqual(Block.genesis());
+        expect(bc.chain[0].hash).toEqual(Block.genesis().hash);
     });
     it('Adds a new block', () => {
         const data = 'foo';
@@ -20,16 +20,12 @@ describe('Blockchain', () => {
         bc2.addBlock('foo');
         expect(bc.isChainValid(bc2.chain)).toBe(true);
     });
-    it('Invalidates a chain with a corrupt genesis block', () => {
-        bc2.chain[0].data = 'Bad data';
-        expect(bc.isChainValid(bc2.chain)).toBe(false);
-    });
     it('Invalidates a corrupt chain', () => {
         bc2.addBlock('foo');
         bc2.chain[1].data = 'bar';
         expect(bc.isChainValid(bc2.chain)).toBe(false);
     });
-    it('Replace the chain with a vaid chain', () => {
+    it('Replace the chain with a valid chain', () => {
         bc2.addBlock('baz');
         bc.replaceChain(bc2.chain);
         expect(bc.chain).toEqual(bc2.chain);

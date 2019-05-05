@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "dev-test": "nodemon ./tests/dev-test",
+    "dev-test": "node ./tests/dev-test",
     "start": "node ./app",
-    "dev": "nodemon ./app"
+    "dev": "node ./app"
   },
   "jest": {
     "testEnvironment": "node"
@@ -15,12 +15,11 @@
   "author": "Soumik Das",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.9.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^21.27.2",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.6"
+    "jest": "^24.7.1"
   },
   "dependencies": {
     "body-parser": "^1.18.3",

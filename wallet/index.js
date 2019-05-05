@@ -1,20 +1,32 @@
+/**
+ * Wallet Module
+ * @module wallet/index
+ */
+
 const ChainUtil = require('../chain-util');
 const { INIT_BALANCE } = require('../config');
 const Transaction = require('./transaction');
 
+/** Class representing the wallet of a peer in the P2P network */
 class Wallet {
+    /**
+     * Creates a new wallet for a peer
+     */
     constructor() {
         this.balance = INIT_BALANCE;
         this.keyPair = ChainUtil.genKeyPair();
         this.publicKey = this.keyPair.getPublic().encode('hex');
     }
-
+    /**
+     * Dump the contents of the wallet
+     * @returns {string} - output of the contents of the wallet
+     */
     toString() {
         return `Wallet -
             Public Key  : ${this.publicKey.toString()}
             Balance     : ${this.balance}`;
     }
-
+    
     sign(dataHash) {
         return this.keyPair.sign(dataHash);
     }

@@ -75,6 +75,8 @@ These are described below:
 |/mine-transaction  |GET            |Mine current unconfirmed transactions from the pool|
 
 ## Demo
+Here we will set up three peers. Every peer starts with an amount of 500 coins in their wallet. Then one peer will transfer some money to the 2nd peer. The third peer then mines the transaction thereby validating it.
+
 Once atleast three app instances are running,transaction(s) can be first established between peers, and then the third peer can be used as a miner to verify the transaction(s), and add to the blockchain.
 
 So we do a GET request on the 2nd peer instance with endpoint `http://localhost:3002/public-key`.
@@ -161,4 +163,11 @@ Then to confirm the transactions we mine the transaction block(s) via the endpoi
    }
 ]
 ```
-There are still things to be done. More on this later!
+
+## There are still things to be done. 
+I have listed some of the things, which might be done in the future but in no particular order
+- Dockerize/Containerize the application so that one peer can be run on every container 
+- Add docker-compose to run multiple peers 
+- Create a frontend-app (possibly using React + Material design lite)
+
+More on this later!

@@ -4,7 +4,8 @@
   "description": "A Prototypical Cryptocurrency implementation",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest", 
+    "test-watch": "jest --watchAll",
     "dev-test": "node ./tests/dev-test",
     "start": "node ./app",
     "dev": "node ./app"

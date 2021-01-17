@@ -1,7 +1,9 @@
 # TYPCOIN
 A prototypical crypto-currency implementation
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.com/soumik-uxd/typcoin.svg?branch=master)](https://travis-ci.com/soumik-uxd/typcoin)
+[![Coverage Status](https://coveralls.io/repos/github/soumik-uxd/typcoin/badge.svg)](https://coveralls.io/github/soumik-uxd/typcoin)
 
 Please note this is still a very much work in progress, but has the potential to be a decent decentralized cryptocurrency implementation which can also be repurposed with some minor changes to work as a distibuted ledger.
 This was primarily created as a demonstration project to augment my self-study of blockchain topics.
